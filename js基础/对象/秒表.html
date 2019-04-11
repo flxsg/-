@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			#div1{
+				width: 200px;
+				height: 300px;
+				background-color: #0000FF;
+				margin: 100px auto;
+				text-align: center;
+				padding-top:50px ;
+			}
+			#count{
+				width: 100px;
+				height: 50px;
+				background-color: #FFFF00;
+				line-height: 50px;
+				margin:auto;
+			}
+			#div1 input{
+				margin-top: 20px;
+				width: 100px;
+				height: 30px;
+			}
+		</style>
+		<script type="text/javascript">
+			//将查找标签节点操作进行简化
+			function $(id){
+				return document.getElementById(id);
+			}
+			window.onload = function(){
+				var count = 0;
+				var timer = null;
+				$("start").onclick = function(){
+					timer = setInterval(function(){
+						count++;
+						$("id_S").innerHTML = showNum(count % 60);
+						$("id_M").innerHTML = showNum(parseInt(count / 60) % 60);
+						$("id_H").innerHTML = showNum(parse(count / 3600));
+					},1000);
+				}
+				$("pause").onclick = function(){
+					clearInterval(timer);
+				}
+				
+				$("stop").onclick = function(){
+					clearInterval(timer);
+					count = 0;
+					$("id_S").innerHTML = "00";
+					$("id_M").innerHTML = "00";
+					$("id_H").innerHTML = "00";
+				}
+			}
+			function showNum(num){
+				if(num<10){
+					return "0" + num;
+				}
+				else{
+					return num;
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="div1">
+			<div id="count">
+				<span id="id_H">00</span>:
+				<span id="id_M">00</span>:
+				<span id="id_S">00</span>
+			</div>
+			<input id="start" type="button" value="开始" />
+			<input id="pause" type="button" value="暂停" />
+			<input id="stop" type="button" value="停止" />
+		</div>
+	</body>
+</html>

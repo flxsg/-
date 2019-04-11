@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+				在JS中日期也是一个数据类型/复合数据类型，是对象
+				对象的属性
+				对象方法
+				日期对象 Date
+			*/
+			/*
+				日期对象的创建方式
+				参数：如果我们不传参数，默认获取的就是当前系统的时间。
+				【注】我们所用的时间都是根据格林尼治时间，中国北京处于东八区
+			*/
+			var d = new Date();
+			document.write(d + "<br />");
+			
+			/*
+				生成日期对象的参数
+				参数类型可以是：
+				"2015/08/22"
+				2015-08-22
+				2015，08，22，14，34
+			*/
+			var d1 = new Date("2015/08/22");
+			document.write(d1 + "<br />");
+			var d2 = new Date("2015-08-22");
+			document.write(d2 + "<br />");
+			var d3 = new Date(2015,08,22,14,34);
+			document.write(d3 + "<br />");
+			var d4 = new Date(1000);//毫秒
+			document.write(d4 + "<br />");
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

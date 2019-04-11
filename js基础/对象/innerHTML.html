@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+				innerHTML 
+			*/
+			window.onload = function(){
+				var oBtn = document .getElementById("btn");
+				var oDiv = document.getElementById("div1");
+				
+				oBtn.onclick = function(){
+					// alert(oDiv.innerHTML);
+					oDiv.innerHTML = "<h1>ddsa</h1>";
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id = "div1">
+			<em>xieti</em>
+		</div>
+		<input type="button" id = "btn" value="按钮" />
+	</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+				setInterval(函数，毫秒数)；
+				功能：每隔所传参数的毫秒数，就调用一次所传参数的函数
+				
+				clearInterval 取消定时器
+			*/
+			var i = 0;
+			
+			window.onload = function(){
+				var oBtn = document.getElementById("btn");
+				oBtn.onclick = function(){ 
+					var timr = setInterval(function (){
+				document.write(i++ + "<br />");
+				if(i == 5){
+					clearInterval(timr);
+				}
+			},1000);//返回值定时器的ID
+					alert(timr);
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" id="btn" value="按钮" />
+	</body>
+</html>
