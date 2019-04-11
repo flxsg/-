@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+				使用于document.write()
+				big()		用大号字体显示字符串
+				blink()		显示闪动字符串（IE下无效）
+				bold()		使用粗体显示字符串
+				fixed()		以打字机文本显示字符串
+				strike()	使用删除线来显示字符串
+				fontcolor()	使用指定颜色来显示字符串
+				fontsize()	使用指定尺寸来显示字符串
+				link()		把字符串显示为链接
+				sub()		把字符串显示为下标
+				sup()		把字符串显示为上标
+			*/
+		    document.write("hello".sub()+" world".sup()); 
+			
+			/*
+				字符串.charCodeAt（下标）
+				返回值：返回字符串中对应下标字符的ASCII码值
+			*/
+			var str = "hello";
+			alert(str.charCodeAt(1));//101
+			
+			/*
+				String.fromCharCode(ASCII);
+				参数：ASCII码值，个数任意
+				返回值：ASCII码值对应字符组成的字符串
+			*/
+			var str = String.fromCharCode(97,56,76);
+			document.write("<br />"+str);
+			
+			/*
+				字符串1.concat(字符串2)
+				返回值：拼接成的字符串
+				一般用 “+”
+			*/
+			var str1 = "aaaa";
+			var str2 = "fffff";
+			document.write(str1.concat(str2));
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

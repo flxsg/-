@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+				数组1.concat(数组2)
+				功能：将两个数组合并成一个新数组，原数组并不会被改变
+				返回值：我们合并好的新数组
+				
+				数组.slice(start,end);
+				功能：基于当前数组获取指定区域元素并创建一个新数组。原数组不改变
+				参数：start开始获取区域的下标，end结束获取区域的下标,不包括end下标位置的元素
+				返回值：指定区域元素生成的新数组
+				
+				splice 可以完成删除，插入，替换操作
+				参数：参数1 截取的开始下标
+					  参数2 截取的长度
+					  参数3 在截取的开始下标位置，我们要插入的元素，插入的元素的个数随意
+					  返回值：截取的元素，组成的数组
+			*/
+// 		    var arr = [1,2,3,4,5];
+// 			var newArr = arr.slice(1,3);
+// 			alert(newArr);
+// 			alert(arr);
+			// var arr = [1,2,3,4];
+			
+			//删除功能
+// 			var res = arr.splice(1,1);
+// 			alert(res);
+// 			alert(arr);
+			
+			//插入功能
+// 			var res = arr.splice(1,0,8,7);
+// 			alert(arr);
+// 			alert(res);//无
+
+			//替换功能  先删除,后插入
+// 			var res = arr.splice(1,1,0);
+// 			alert(res);
+// 			alert(arr);
+
+			/*
+				数组.join(拼接符)
+				功能：使用拼接符将数组中元素拼接成字符串
+				参数:拼接符
+				返回值：拼接好的字符串
+			*/
+			var arr = [1,2,3,4];
+			var str = arr.join("+");
+			alert(str);
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		/*
+			字符串.indexOf(子串，开始查找的位置)
+			返回值：如果在字符串中查找到了字串第一次出现的位置，返回子串出现的位置，
+			否则没有查找到返回-1
+		*/
+		var str = "abdabdadb";
+		document.write(str.indexOf("ab",1)+"<br />");
+		
+		/*
+			字符串.lastIndexOf(子串)；
+			返回值：字串在字符串中最后一次出现的位置，如果没有，返回-1
+		*/
+		document.write(str.lastIndexOf("ab")+"<br />");
+		
+		/*
+			search(/字串/正则)	参数可以是正则表达式
+			正则表达式可以添加修饰符，i代表忽略大小写，g代表全局匹配
+		*/
+		var str1 = "Abcabcabc"
+		document.write(str1.search(/ab/)+"<br />");
+		document.write(str1.search(/ab/i));
+	</script>
+	<body>
+	</body>
+</html>
