@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+				document.getElementsByName("name")
+				参数：name的值
+				返回值:装有符合元素节点的数组
+				【注】name属性一般情况下，只有文本输入框的元素节点才有
+			*/
+			window.onload = function(){
+				var nodes = document.getElementsByName("hi");
+				document.write(nodes + "<br />");
+			}
+		</script>
+	</head>
+	<body>
+		<div name="hi"></div>
+		<span name="hi"></span>
+		<!-- <input type="month" /> -->
+	</body>
+</html>

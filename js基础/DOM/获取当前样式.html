@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#div1{
+				background-color: red;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload = function(){
+				var oDiv = document.getElementById("div1");
+				alert(oDiv.style.width);
+//				 document.write("1");	
+				// alert(oDiv.style.backgroundColor);
+				/*
+					获取当前有效样式
+					getComputedStyle(元素节点)[获取样式类型]
+				*/
+//				alert(getComputedStyle(oDiv)["width"]);
+			}
+		</script>
+	</head>
+	<body>
+		<div id="div1" style="width:300px;height: 300px;"></div>
+	</body>
+</html>

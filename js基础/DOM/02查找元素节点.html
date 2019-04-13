@@ -5,10 +5,29 @@
 		<title></title>
 		<script type="text/javascript">
 			/*
-				document.get
+				document.getElementById("id")
+				找到当前元素节点的id
 			*/
+		   window.onload = function(){
+			   var oDiv = document.getElementById("div1");
+			   document.write(oDiv.tagName + "<br />");		//获取标签节点标签名
+			   document.write(oDiv.innerHTML + "<br />");	//获取节点中内容,解析标签
+			   alert(oDiv.innerHTML);
+			   oDiv.innerHTML = "<h1> wo <h1/>";
+			   document.write(oDiv.innerHTML);
+			   
+			   document.write(oDiv.title + "<br />");
+			   document.write(oDiv.className + "<br />");
+			   oDiv.title = "kk";
+			   oDiv.className = "oo";
+			   document.write(oDiv.style + "<br />" + oDiv.style.width + "<br />");
+			   document.write(oDiv.style.backgroundColor);
+		   }
 		</script>
 	</head>
 	<body>
+		<div id="div1" title="hello" class="box" style="width: 300px;background-color:red ;">
+			<em> kk</em>
+		</div>
 	</body>
 </html>

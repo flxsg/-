@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+				document.getElmentBytagName()
+				参数：标签名
+				功能：获取当前页面上所有符合该标签名标准的元素节点
+				返回值：一个装有符合条件的元素节点的数组
+			*/
+			window.onload = function(){
+				//获取当前页面上所有li标签
+// 				var aLis = document.getElementsByTagName("li");
+// 				alert(aLis.length);//[object HTMLCollection] 是一个数组
+				//获取ul下的所有的li标签
+				var oUl = document.getElementById("ul1");
+				var aLis = oUl.getElementsByTagName("li");
+				document.write(aLis.length);
+				for(var i = 0;i<aLis.length; i++){
+					document.write(aLis[i].innerHTML + "<br />");
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<ul id="ul1">
+			<li>111111</li>
+			<li>222222</li>
+			<li>333333</li>
+			<li>444444</li>
+		</ul>
+		<ol>
+			<li>555555</li>
+			<li>666666</li>
+			<li>777777</li>
+			<li>888888</li>
+		</ol>
+	</body>
+</html>

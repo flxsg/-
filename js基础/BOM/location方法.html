@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+				assign()	跳转到指定URL
+				reload()	重载当前URL,如果括号中传true忽略浏览器缓存直接从服务器重载
+				replace()	不能返回上一个页面
+			*/
+			window.onload = function(){
+				var oBtn = document.getElementById("btn");
+				oBtn.onclick = function(){
+					location.assign("http://www.baidu.com");
+					//location.reload();
+					//location.replace("http://www.baidu.com");
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" value="按钮" id="btn" />
+	</body>
+</html>
