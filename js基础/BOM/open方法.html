@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+				window.open()
+				open()
+				1.要加载的URL
+				2.窗口的名称或者窗口的目标
+				3.一串具有特殊意义的字符串
+			*/
+		   window.onload = function(){
+			   var oBtn = document.getElementById("btn");
+			   oBtn.onclick = function(){
+				   open("http://www.baidu.com");  //会在新窗口打开
+				   open("http://www.baidu.com","baidu");/*新开一个窗口,但重复点击不会
+				   再去继续在新窗口打开url*/
+				   open("http://www.baidu.com","baidu","width=400,height=400");
+				   //定义新开窗口样式
+			   }
+		   }
+		</script>
+	</head>
+	<body>
+		<input type="button" value="按钮" id="btn" />
+	</body>
+</html>
